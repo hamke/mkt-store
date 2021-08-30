@@ -4,7 +4,7 @@ require_once(dirname(__FILE__).'/src/iamport.php');
 $path = 'https://hellotblog.files.wordpress.com/2018/07/11.pdf';
 echo $path;
 
-// $iamport = new Iamport('YOUR_IMP_REST_API_KEY', 'YOUR_IMP_REST_API_SECRET'); // hello@wp-talk.com
+// $iamport = new Iamport('YOUR_IMP_REST_API_KEY', 'YOUR_IMP_REST_API_SECRET'); // hello@mkttalk.com
 $iamport = new Iamport('6754834133706228', 'Tu1QH7BjTaKJy9TVuGZ9Wf25GTxI0RxTlyJ3Glmzv6j3gcZKTZUPeWVUQtDQkaJGJtJqO60jdjntvmep'); // leden_online@naver.com
 
 #1. imp_uid 로 주문정보 찾기(아임포트에서 생성된 거래고유번호)

@@ -4,7 +4,7 @@ error_reporting(0);
 
 if ( !empty($_SERVER['HTTP_REFERER']) ) {
 
-  if ( $_SERVER['HTTP_REFERER'] == 'http://localhost:8888/i/wp-talk-store-html/ajax-test/' ) {
+  if ( $_SERVER['HTTP_REFERER'] == 'http://localhost:8888/i/MKTTALK-store-html/ajax-test/' ) {
 
   // if( !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && ( strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest' ) ) {
 
