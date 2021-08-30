@@ -2,6 +2,7 @@ var IMP = window.IMP; // 생략가능
 // IMP.init('imp21028697'); // hello@wp-talk.com (카카오페이)
 // IMP.init('imp79611779'); // hello@ttmkt.com (카카오페이)
 // IMP.init('imp78149347'); // hello@chinatalk.net (카카오페이)
+// IMP.init('imp46000446'); // hello@mkttalk.com (카카오페이)
 IMP.init('imp14840138'); // leden_online@naver.com ( 카카오페이 / 테스트 )
 // IMP.init('imp90524050'); // the235style@yahoo.com ( 나이스페이 / 테스트 )
 
@@ -20,18 +21,28 @@ function pay() {
   }
 
   IMP.request_pay({
-    amount : 10,
-    // amount : product_amount,
-  	buyer_name : '게스트(비회원)',
-  	name : product_name
-    // pg: 'inicis', // version 1.1.0부터 지원.
-    // pay_method: 'card',
-    // merchant_uid: 'merchant_' + new Date().getTime(),
-    // buyer_email: 'iamport@siot.do',
-    // buyer_tel: '010-1234-5678',
-    // buyer_addr: '서울특별시 강남구 삼성동',
-    // buyer_postcode: '123-456',
-    // m_redirect_url: 'https://www.yourdomain.com/payments/complete'
+    pg : 'kakaopay',
+    pay_method : 'card',
+    merchant_uid : 'merchant_' + new Date().getTime(),
+    name : '주문명:결제테스트',
+    amount : 14000,
+    buyer_email : 'iamport@siot.do',
+    buyer_name : '구매자이름',
+    buyer_tel : '010-1234-5678',
+    buyer_addr : '서울특별시 강남구 삼성동',
+    buyer_postcode : '123-456'
+    // amount : 10,
+    // // amount : product_amount,
+  	// buyer_name : '게스트(비회원)',
+  	// name : product_name
+    // // pg: 'inicis', // version 1.1.0부터 지원.
+    // // pay_method: 'card',
+    // // merchant_uid: 'merchant_' + new Date().getTime(),
+    // // buyer_email: 'iamport@siot.do',
+    // // buyer_tel: '010-1234-5678',
+    // // buyer_addr: '서울특별시 강남구 삼성동',
+    // // buyer_postcode: '123-456',
+    // // m_redirect_url: 'https://www.yourdomain.com/payments/complete'
   }, function(rsp) {
     if ( rsp.success ) {
       //[1] 서버단에서 결제정보 조회를 위해 jQuery ajax로 imp_uid 전달하기
